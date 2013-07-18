@@ -1,10 +1,5 @@
 def combine_anagrams(words)
 	sorted = words.map {|w| w.chars.sort.join.downcase}
- 	# selected = sorted.map do |w|
- 	# 	anagrams = sorted.select{|p| w.chars.sort.join == p}
- 	# 	p anagrams
- 	# 	anagrams.count > 1 ? anagrams : w
-  # end
   final = []
 	words.each_with_index do | w, i|
 		r = []

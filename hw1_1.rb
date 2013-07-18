@@ -4,12 +4,9 @@ def palindrome? string
 	string_down == reverted
 end
 
-
-
 def count_words frase
 	test1 = frase.gsub(/(?=\S)\W/, '').downcase
 	array1 = test1.split(' ')
-
 	h = Hash.new
 	array1.each do |elm|
 		h[elm] = 1 + (h[elm] || 0)

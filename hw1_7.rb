@@ -4,7 +4,7 @@ class CartesianProduct
     def initialize(seq1, seq2)
     	@seq1 = seq1
     	@seq2 = seq2
-	  end
+	end
 
     def each
     	result = []
@@ -16,7 +16,6 @@ class CartesianProduct
     			end	
     		end	
     	end	
-    	#result
     end	
 end
 

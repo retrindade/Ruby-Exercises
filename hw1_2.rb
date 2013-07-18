@@ -1,5 +1,6 @@
 class WrongNumberOfPlayersError < StandardError ; end
 class NoSuchStrategyError < StandardError ; end
+
 def rps_game_winner(game)
   raise WrongNumberOfPlayersError unless game.length == 2
   strat1 = game[0][1]
@@ -21,8 +22,8 @@ def rps_tournament_winner(tournament)
     tourn1.each do |game|
       r << rps_game_winner(game)
     end
-      semi << rps_game_winner(r)
-      r.clear
+    semi << rps_game_winner(r)
+    r.clear
   end
-   winner = rps_game_winner(semi)
+  winner = rps_game_winner(semi)
 end

@@ -8,20 +8,17 @@ class Numeric
       super
     end
   end
-  def in(currency) 
 
-  	method_missing(currency)
+  def in(currency) 
+		method_missing(currency)
   end
 end
 
 class String
-
-	#def method_missing(method_id)
-	#	if method_id.to_s == "palindrome?"
 	def palindrome?
 		string_down = self.gsub(/\W+/, '').downcase
-			reverted = string_down.reverse
-			string_down == reverted
+		reverted = string_down.reverse
+		string_down == reverted
 	end
 end
 
@@ -29,7 +26,6 @@ class Array
 	def method_missing(method_id)
 		if method_id.to_s == "palindrome?"
 			self.eql? self.reverse
-
 		end
 	end
 end
